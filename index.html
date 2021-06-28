@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>Cats Of Fortune</title>
+  </head>
+
+  <body>
+
+    <div class="cat-carousel-wrapper">
+      <div id="catsCarousel"></div>
+      <div class="cat-carousel--button button--next"></div>
+      <div class="cat-carousel--button button--prev"></div>
+    </div>
+
+    <input
+      id="searchbar"
+      onkeyup="search_cat()"
+      type="text"
+      name="search"
+      placeholder="Find a cat..."
+    />
+    <div class="cats-grid">
+      <div id="catsGrid" class="grid"></div>
+    </div>
+
+      <div class="modal" id="modal">
+        <div class="modal-bg modal-exit"></div>
+        <div class="modal-container" id="modalContent">
+          
+        </div>
+      </div>
+
+      <button id="show-more">Show More</button>
+    </div>
+    <script src="js/catsInfo.js"></script>
+    <script src="js/catsCarousel.js"></script>
+    <script src="js/catCarouselModal.js"></script>
+    <script src="js/catsGrid.js"></script>
+    <script src="js/catFinder.js"></script>
+    <script src="js/showMore.js"></script>
+
+  </body>
+</html>

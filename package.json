@@ -1,0 +1,10 @@
+{
+  "scripts": {
+    "scss": "node-sass --watch scss -o css",
+    "dev": "live-server ."
+  },
+  "dependencies": {
+    "live-server": "^1.2.1",
+    "node-sass": "^6.0.0"
+  }
+}
