@@ -1,9 +1,9 @@
-var cats = DATA.cats;
-var catGrid = document.getElementById("catsGrid");
+let catsGridData = data.cats;
+let catGrid = document.getElementById("catsGrid");
 
-var catGridHTML = "";
+let catGridHTML = "";
 
-cats.forEach((cat) => {
+catsGridData.forEach((cat) => {
   catGridHTML += `
         <div class="cat">
             <figure>
@@ -23,7 +23,7 @@ cats.forEach((cat) => {
 
 catGrid.innerHTML = catGridHTML;
 
-var catButtons = document.getElementsByClassName("udomi");
+let catButtons = document.getElementsByClassName("udomi");
 
 [...catButtons].forEach((catButton) => {
   catButton.addEventListener("click", () => {

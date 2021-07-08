@@ -1,21 +1,22 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/main.css" />
+
     <title>Cats Of Fortune</title>
   </head>
 
   <body>
 
     <div class="cat-carousel-wrapper">
-      <div id="catsCarousel"></div>
+      <div id="kitten-carousel"></div>
       <div class="cat-carousel--button button--next"></div>
       <div class="cat-carousel--button button--prev"></div>
     </div>
 
     <input
       id="searchbar"
-      onkeyup="search_cat()"
+      onkeyup="searchCat()"
       type="text"
       name="search"
       placeholder="Find a cat..."
@@ -27,18 +28,17 @@
       <div class="modal" id="modal">
         <div class="modal-bg modal-exit"></div>
         <div class="modal-container" id="modalContent">
-          
         </div>
       </div>
 
       <button id="show-more">Show More</button>
     </div>
-    <script src="js/catsInfo.js"></script>
-    <script src="js/catsCarousel.js"></script>
-    <script src="js/catCarouselModal.js"></script>
-    <script src="js/catsGrid.js"></script>
-    <script src="js/catFinder.js"></script>
-    <script src="js/showMore.js"></script>
+    <script src="js/cats-info.js"></script>
+    <script src="js/cats-carousel.js"></script>
+    <script src="js/cat-carousel-modal.js"></script>
+    <script src="js/cats-grid.js"></script>
+    <script src="js/cat-finder.js"></script>
+    <script src="js/show-more.js"></script>
 
   </body>
 </html>

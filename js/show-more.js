@@ -1,6 +1,6 @@
-function MoreCats() {
-  var catGrid = document.getElementById("catsGrid");
-  var cats = catGrid.querySelectorAll(".cat");
+function moreCats() {
+  let catGrid = document.getElementById("catsGrid");
+  let cats = catGrid.querySelectorAll(".cat");
 
   if (cats.length < 20) {
     document.getElementById("show-more").style.display = "none";
@@ -9,4 +9,4 @@ function MoreCats() {
   }
 }
 
-MoreCats();
+moreCats();

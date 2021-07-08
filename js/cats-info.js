@@ -1,5 +1,6 @@
-var DATA = {
-  cats: [{
+let data = {
+  cats: [
+    {
       name: "Mrakan",
       color: "crna",
       age: 10,
@@ -73,6 +74,41 @@ var DATA = {
       name: "Riba",
       color: "sivo-bijela",
       age: 6,
+    },
+    {
+      name: "Baco",
+      color: "smedje-bijela",
+      age: 8,
+    },
+    {
+      name: "Dena",
+      color: "siva",
+      age: 4,
+    },
+    {
+      name: "Laki",
+      color: "bijelo-crna",
+      age: 3,
+    },
+    {
+      name: "Lust",
+      color: "bijela",
+      age: 7,
+    },
+    {
+      name: "Pako",
+      color: "narancasta",
+      age: 5,
+    },
+    {
+      name: "Nemo",
+      color: "sivo-bijela",
+      age: 4,
+    },
+    {
+      name: "Timi",
+      color: "narancasta",
+      age: 9,
     },
   ],
 };
