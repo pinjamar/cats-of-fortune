@@ -4,7 +4,7 @@
  * 3. Connects carousel with mouse events
  * 4. Starts carousel autoplay
  */
-fetch("macketine.json")
+fetch("cats.json")
   .then((response) => {
     return response.json();
   })
@@ -13,13 +13,16 @@ fetch("macketine.json")
     catCarousel.innerHTML = buildCarouselHTML(json.cats);
     return catCarousel;
   })
+
   .then((catCarousel) => {
     connectCarouselEvents(catCarousel);
     return catCarousel;
   })
   .then((catCarousel) => {
     startCarouselAutoplay(catCarousel);
-  });
+  })
+
+  .then(() => modalPopup());
 
 /**
  * Hooks up carousel events. Should be called after carousel has finished building HTML.
@@ -120,7 +123,7 @@ function buildCarouselHTML(cats) {
     })
     .forEach((cat) => {
       catCarouselHTML += `
-        <div class="slide-card">
+        <div class="slide-card" id="carousel-id-${cat.name}">
             <a data-modal
               ><img class="carousel-item" src="images/${cat.name}.jpeg"
             />

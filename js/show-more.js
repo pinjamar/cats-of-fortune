@@ -1,4 +1,4 @@
-function moreCats() {
+function showMoreCats() {
   let catGrid = document.getElementById("catsGrid");
   let cats = catGrid.querySelectorAll(".cat");
 
@@ -8,5 +8,3 @@ function moreCats() {
     document.getElementById("show-more").style.display = "inline";
   }
 }
-
-moreCats();
