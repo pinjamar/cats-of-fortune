@@ -14,6 +14,24 @@ function modalPopup() {
         modalContent.innerHTML = trigger.querySelector(
           "[data-modal-content]"
         ).innerHTML;
+
+        let kittenButtons = document.getElementsByClassName(
+          "udomi-carusel-button"
+        );
+
+        [...kittenButtons].forEach((kittenButton) => {
+          kittenButton.addEventListener("click", () => {
+            const catName = kittenButton.dataset.catName;
+
+            let result = confirm(`Zelite li udomiti ${catName}?`);
+
+            if (result) {
+              document.getElementById(`carousel-id-${catName}`).remove();
+              document.getElementById(`grid-cat-${catName}`).remove();
+              modal.classList.remove("open");
+            }
+          });
+        });
       } else {
         modalContent.innerHTML = "Unknown";
       }

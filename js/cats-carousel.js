@@ -12,23 +12,6 @@ fetch("cats.json")
     let catCarousel = document.getElementById("kitten-carousel");
     catCarousel.innerHTML = buildCarouselHTML(json.cats);
 
-    let kittenButtons = document.getElementsByClassName("udomi-carusel-button");
-
-    [...kittenButtons].forEach((kittenButton) => {
-      kittenButton.addEventListener("click", () => {
-        const domElement = kittenButton.parentNode.parentNode;
-        const carouselButtonId = kittenButton.dataset.carouselButtonId;
-        const catName = kittenButton.dataset.catName;
-
-        let result = confirm(`Zelite li udomiti ${catName}?`);
-
-        if (result) {
-          document.getElementById(carouselButtonId).remove();
-          domElement.remove();
-        }
-      });
-    });
-
     return catCarousel;
   })
 
@@ -65,15 +48,15 @@ function connectCarouselEvents(catCarousel) {
       catCarousel.scrollLeft + catCarousel.clientWidth
     ) {
       catCarousel.scroll({
-        left: 0,
+        left: 1,
+        behavior: "smooth",
+      });
+    } else {
+      catCarousel.scroll({
+        left: catCarousel.scrollLeft + cardWidth,
         behavior: "smooth",
       });
     }
-
-    catCarousel.scroll({
-      left: catCarousel.scrollLeft + cardWidth,
-      behavior: "smooth",
-    });
   });
 
   prevButton.addEventListener("click", () => {
@@ -82,12 +65,12 @@ function connectCarouselEvents(catCarousel) {
         left: 999999,
         behavior: "smooth",
       });
+    } else {
+      catCarousel.scroll({
+        left: catCarousel.scrollLeft - cardWidth,
+        behavior: "smooth",
+      });
     }
-
-    catCarousel.scroll({
-      left: catCarousel.scrollLeft - cardWidth,
-      behavior: "smooth",
-    });
   });
 }
 
@@ -151,7 +134,11 @@ function buildCarouselHTML(cats) {
                 <h1>${cat.name}</h1>
                 <p>Color: ${cat.color}</p>
                 <P>Age: ${cat.age}</P>
-                <button class="udomi-carusel-button" data-cat-name="${cat.name}" data-carousel-button-id="carousel-button-id-${cat.name}" data-modal="modal-one">UDOMI</button>
+                <button class="udomi-carusel-button" data-cat-name="${
+                  cat.name
+                }" data-carousel-button-id="carousel-button-id-${
+        cat.name
+      }" data-modal="modal-one">UDOMI</button>
                 <button class="modal-close modal-exit">X</button>              
             </div>
             </a>

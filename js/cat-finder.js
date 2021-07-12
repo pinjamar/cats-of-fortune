@@ -1,13 +1,25 @@
 function searchCat() {
   let input = document.getElementById("searchbar").value;
   input = input.toLowerCase();
-  let x = document.getElementsByClassName("cat");
+  let catGridElements = document.getElementsByClassName("cat");
 
-  for (i = 0; i < x.length; i++) {
-    if (!x[i].innerHTML.toLowerCase().includes(input)) {
-      x[i].style.display = "none";
+  let count = 0;
+
+  for (i = 0; i < catGridElements.length; i++) {
+    if (!catGridElements[i].innerHTML.toLowerCase().includes(input)) {
+      catGridElements[i].style.display = "none";
+
+      count++;
     } else {
-      x[i].style.display = "list-item";
+      catGridElements[i].style.display = "list-item";
     }
+  }
+
+  const searchStatus = document.getElementById("search-status");
+
+  if (catGridElements.length == count) {
+    searchStatus.innerHTML = `Nema rezultata za ${input}`;
+  } else {
+    searchStatus.innerHTML = ``;
   }
 }

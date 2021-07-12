@@ -35,7 +35,7 @@ function buildCatsGridHTML(cats) {
 
   cats.forEach((cat) => {
     catGridHTML += `
-        <div class="cat">
+        <div class="cat" id="grid-cat-${cat.name}">
             <figure>
                 <img src="images/${cat.name}.jpeg" />
             </figure>
