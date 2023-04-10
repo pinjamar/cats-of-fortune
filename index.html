@@ -1,45 +1,41 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <link rel="stylesheet" href="css/main.css" />
 
-    <title>Cats Of Fortune</title>
-  </head>
+<head>
+  <link rel="stylesheet" href="css/main.css" />
 
-  <body>
+  <title>Cats Of Fortune</title>
+</head>
 
-    <div class="cat-carousel-wrapper">
-      <div id="kitten-carousel"></div>
-      <div class="cat-carousel--button button--next"></div>
-      <div class="cat-carousel--button button--prev"></div>
+<body>
+
+  <div class="cat-carousel-wrapper">
+    <div id="kitten-carousel"></div>
+    <div class="cat-carousel--button button--next"></div>
+    <div class="cat-carousel--button button--prev"></div>
+  </div>
+
+  <input id="searchbar" onkeyup="searchCat()" type="text" name="search" placeholder="Find a cat..." />
+  <div class="cats-grid">
+    <div id="catsGrid" class="grid"></div>
+  </div>
+  <div id='search-status'></div>
+
+  <div class="modal" id="modal">
+    <div class="modal-bg modal-exit"></div>
+    <div class="modal-container" id="modalContent">
     </div>
+  </div>
 
-    <input
-      id="searchbar"
-      onkeyup="searchCat()"
-      type="text"
-      name="search"
-      placeholder="Find a cat..."
-    />
-    <div class="cats-grid">
-      <div id="catsGrid" class="grid"></div>
-    </div>
-    <div id='search-status'></div>
+  <button id="show-more">Show More</button>
+  </div>
+  <script src="js/show-more.js"></script>
+  <script src="js/cats-carousel.js"></script>
+  <script src="js/cat-carousel-modal.js"></script>
+  <script src="js/cats-grid.js"></script>
+  <script src="js/cat-finder.js"></script>
+  <script src="js/main.js"></script>
 
-      <div class="modal" id="modal">
-        <div class="modal-bg modal-exit"></div>
-        <div class="modal-container" id="modalContent">
-        </div>
-      </div>
+</body>
 
-      <button id="show-more">Show More</button>
-    </div>
-    <script src="js/show-more.js"></script>
-    <script src="js/cats-carousel.js"></script>
-    <script src="js/cat-carousel-modal.js"></script>
-    <script src="js/cats-grid.js"></script>
-    <script src="js/cat-finder.js"></script>
-    <script src="js/main.js"></script>
-
-  </body>
 </html>

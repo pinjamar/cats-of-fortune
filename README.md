@@ -1,8 +1,12 @@
-# Fortuna Cats
+# My dog's photoalbum
 
-## Pokretanje
+## This started as a job interview assignment, evolved into a photoalbum
 
-U terminalu u glavnom direktoriju repozitorija pokrenite
+\*The ssignment forbade me to use any libraries or frameworks so that is how it is built
+
+- Javascript, SCSS and HTML
+
+* Just clone the project and run:
 
 ```
 npm install
